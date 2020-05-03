@@ -1,4 +1,4 @@
-FROM wordpress:5.4.0-php7.3
+FROM wordpress:5.4.1-php7.3
 
 WORKDIR /usr/local/bin
 RUN apt-get update && apt-get install -y wget
