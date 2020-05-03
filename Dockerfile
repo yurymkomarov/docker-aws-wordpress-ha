@@ -7,4 +7,6 @@ RUN tar -zxvf latest-64bit && rm -rf latest-64bit
 RUN chown root:root amazon-elasticache-cluster-client.so && mv amazon-elasticache-cluster-client.so /usr/local/lib/php/extensions/*/
 RUN echo 'extension=amazon-elasticache-cluster-client.so' >> /usr/local/etc/php/conf.d/amazon-elasticache-cluster-client.ini
 
+COPY uploads.ini /usr/local/etc/php/conf.d/
+
 WORKDIR /var/www/html
